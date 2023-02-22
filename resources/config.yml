@@ -1,0 +1,116 @@
+job-title: "Job Menu" #Le titre de la form quand on execute /job
+message-to-all: "{player} vient de passer au niveau {lvl} du metier de {job} !" #mettez null si vous n'en voulez pas
+jobs:
+  mineur:
+    enable: true
+    mineur-title: "Mineur Menu"
+    mineur-name: "Mineur" #Le nom que vous voulez donner à ce job dans les messages et menu
+    stats: "Niveau: {lvl}\nExp: {exp}\nExp manquant: {exp-manquant}"
+    blocs:
+      "56:0": 80 #Exp donné quand le bloc est cassé
+    enable-creative: false #Active ou désactive le fait qu'un joueur en créatif gagne de l'exp en cassant les blocs
+    niveaux:
+      1:
+        exp-requis: 100
+        recompense:
+          label: "x1 Epee en diamant" #Ce qui s'affiche dans le menu de la récompense du niveau 1
+          type: item #Vous avez le choix entre item/commande
+          item: "276:0" #id:meta
+          count: 1
+      2:
+        exp-requis: 200
+        recompense:
+          label: "x1 Message mignon"
+          type: commande #Vous avez le choix entre item/commande
+          commande: "say {player} est le/la meilleur(e)"
+  agriculteur:
+    enable: true
+    agriculteur-title: "Agriculteur Menu"
+    agriculteur-name: "Agriculteur"
+    stats: "Niveau: {lvl}\nExp: {exp}\nExp manquant: {exp-manquant}"
+    blocs:
+      "103:0": 80
+      "86:0" : 40
+    enable-creative: true
+    niveaux:
+      1:
+        exp-requis: 100
+        recompense:
+          label: "x1 Epee en diamant"
+          type: item
+          item: "276:0"
+          count: 1
+      2:
+        exp-requis: 200
+        recompense:
+          label: "x1 Message mignon"
+          type: commande
+          commande: "say {player} est le/la meilleur(e)"
+  bucheron:
+    enable: true
+    bucheron-title: "Bucheron Menu"
+    bucheron-name: "Bucheron"
+    stats: "Niveau: {lvl}\nExp: {exp}\nExp manquant: {exp-manquant}"
+    blocs:
+      "17:0": 80
+      "162:0": 40
+    enable-creative: true
+    niveaux:
+      1:
+        exp-requis: 100
+        recompense:
+          label: "x1 Epee en diamant"
+          type: item
+          item: "276:0"
+          count: 1
+      2:
+        exp-requis: 200
+        recompense:
+          label: "x1 Message mignon"
+          type: commande
+          commande: "say {player} est le/la meilleur(e)"
+  chasseur:
+    enable: false
+    chasseur-title: "Chasseur Menu"
+    chasseur-name: "Chasseur"
+    stats: "Niveau: {lvl}\nExp: {exp}\nExp manquant: {exp-manquant}"
+    entites:
+      player: 80 #Pour les entités autre qu'un joueurs, ça fonctionne par nametag
+      zombie: 40
+    enable-creative: true
+    niveaux:
+      1:
+        exp-requis: 100
+        recompense:
+          label: "x1 Epee en diamant"
+          type: item
+          item: "276:0"
+          count: 1
+      2:
+        exp-requis: 200
+        recompense:
+          label: "x1 Message mignon"
+          type: commande
+          commande: "say {player} est le/la meilleur(e)"
+  assembleur:
+    enable: true
+    assembleur-title: "Assembleur Menu"
+    assembleur-name: "Assembleur"
+    stats: "Niveau: {lvl}\nExp: {exp}\nExp manquant: {exp-manquant}"
+    crafts: #id:meta de l'item fabriqué, mettez all comme ci-dessous pour donner de l'exp pour tout item fabriqué
+      all: 50
+    enable-creative: true
+    niveaux:
+      1:
+        exp-requis: 100
+        recompense:
+          label: "x1 Epee en diamant"
+          type: item
+          item: "276:0"
+          count: 1
+      2:
+        exp-requis: 200
+        recompense:
+          label: "x1 Message mignon"
+          type: commande
+          commande: "say {player} est le/la meilleur(e)"
