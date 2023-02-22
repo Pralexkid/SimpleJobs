@@ -18,7 +18,7 @@ class Main extends PluginBase
         $this->saveResource("config.yml");
         $this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
         $this->getServer()->getPluginManager()->registerEvents(new PlayersListener(), $this);
-        $this->getServer()->getCommandMap()->register("job", new Job($this, "job", "Ouvre le menu des metiers"));
+        $this->getServer()->getCommandMap()->register("job", new Job("job", "Ouvre le menu des metiers"));
     }
 
     public function getSettings() : Config

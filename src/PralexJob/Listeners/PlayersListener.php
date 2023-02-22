@@ -31,7 +31,7 @@ class PlayersListener implements Listener
         $config = Main::getInstance()->getSettings()->getAll();
         $player = $event->getPlayer();
         $block = $event->getBlock();
-        $im = $block->getId() . ":" . $block->getMeta();
+        $im = $block->getTypeId() . ":" . $block->getStateId();
         if ($config['jobs']['mineur']['enable'] === true)
         {
             if (array_key_exists($im, $config['jobs']['mineur']['blocs']))
@@ -107,7 +107,7 @@ class PlayersListener implements Listener
                     $event->getPlayer()->sendPopup("+ ".$nbr." ".$config['jobs']['assembleur']['assembleur-name']);
                     return;
                 }
-                $im = $crafted->getId() . ":" . $crafted->getMeta();
+                $im = $crafted->getTypeId();
                 if (array_key_exists($im, $config['jobs']['assembleur']['crafts']))
                 {
                     if ($event->getPlayer()->getGamemode() === GameMode::CREATIVE())

@@ -2,26 +2,20 @@
 
 namespace PralexJob\Commands;
 
-use CortexPE\Commando\BaseCommand;
 use EasyUI\element\Button;
 use EasyUI\element\Label;
 use EasyUI\variant\CustomForm;
 use EasyUI\variant\SimpleForm;
+use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
 use PralexJob\Main;
 use PralexJob\Manager\PlayersManager;
 use PralexJob\Manager\SettingsManager;
 
-class Job extends BaseCommand
+class Job extends Command
 {
-
-    protected function prepare(): void
-    {
-        // TODO: Implement prepare() method.
-    }
-
-    public function onRun(CommandSender $sender, string $aliasUsed, array $args): void
+    public function execute(CommandSender $sender, string $commandLabel, array $args)
     {
         if ($sender instanceof Player)
         {

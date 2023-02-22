@@ -1,5 +1,5 @@
 name: Job
 author: Pralexkid
-api: 4.14.1
+api: 5.0.0
 version: 1.0
 main: PralexJob\Main
